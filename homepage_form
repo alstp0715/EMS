@@ -1,0 +1,65 @@
+      <div id="table_form" class="section">
+
+        <div class="sidebar">
+          <div class="nav_1">
+            <div class="nav_title">
+              태양관 발전량(일간)
+            </div>
+            <div id="file_upload" class="data_test">
+              
+            </div>
+          </div>
+          <div class="nav_2">
+            <div class="nav_title">
+              ESS 충전/방전량 (일간)
+            </div>
+          </div>
+          <div class="nav_3">
+            <div class="nav_title">
+              태양광 발전량(월간)
+            </div>
+          </div>
+          <div class="nav_4">
+            <div class="nav_title">
+              ESS 충전/방정량 (월간)
+            </div>
+          </div>
+          <div class="nav_5">
+            <div class="nav_title">
+              ESS 충전/방전량 (누적)
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="content_1">
+            <h2>발전현황</h2>
+            <div>              
+              <figure class="highcharts-figure">
+              <div id="container-speed" class="chart-container"></div>
+              <div id="container-rpm" class="chart-container"></div>
+          </figure>
+        </div>
+          </div> 
+          <!-- 발전현황 -->
+          <div class="content_2">
+            <div>
+              <h2>발전추이 15분|1시간</h2>
+              
+              </div>
+              <div>
+              <canvas class="line-chart" width="300" height="140"></canvas>
+              </div>
+            </div>
+          <!-- 발전추이 -->
+          <div class="content_3">
+            <h2>기상현황</h2>
+          </div>
+          <!-- 기상현황 -->
+          <div class="content_4">
+            <h2>알람내역</h2>
+          </div>
+          <!-- 알람내역 -->
+        </div>
+
+      </div>

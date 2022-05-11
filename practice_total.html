@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/table_form.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.5/xlsx.full.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <title>pra_EMS</title> 
+</head>
+<meta charset="UTF-8">
+<body>
+  <div class="wrap">
+
+      <div class="header">
+         
+          <h1>에너지 관리 시스템(HJTEM)</h1>
+          <div id="clock"></div>
+        <div id="date"></div>
+      </div>
+      
+      <div class="header_bar">
+        <span>전체현황</span>
+        <span><a id="table_btn"  onclick="changePage('table_form')"><button>테이블형태 보기</button></a>
+              <a id="home_btn" class="hidden" onclick="changePage('homepage_form')"><button>기본형태보기</button></a>
+          <input type="file" id="id_file_upload" onchange="upload()"/>
+        </span>
+        
+        <span class="header_table_link">그룹선택 
+          <select>
+            <option>ex</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+          <button>홈</button></span>
+      </div>
+
+
+      <div id="homeForm">
+        <div  id="tableForm" class="section">
+
+          <div class="sidebar">
+            <div class="nav_1">
+              <div class="nav_title">
+                태양관 발전량(일간)
+              </div>
+              <div id="file_upload" class="data_test">
+                
+              </div>
+            </div>
+            <div class="nav_2">
+              <div class="nav_title">
+                ESS 충전/방전량 (일간)
+              </div>
+            </div>
+            <div class="nav_3">
+              <div class="nav_title">
+                태양광 발전량(월간)
+              </div>
+            </div>
+            <div class="nav_4">
+              <div class="nav_title">
+                ESS 충전/방정량 (월간)
+              </div>
+            </div>
+            <div class="nav_5">
+              <div class="nav_title">
+                ESS 충전/방전량 (누적)
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="content_1">
+              <h2>발전현황</h2>
+              <div>
+              <figure class="highcharts-figure">
+                <div id="container-speed" class="chart-container"></div>
+                <div id="container-rpm" class="chart-container"></div>
+            </figure>
+            </div>
+            </div> 
+            
+            <div class="content_2">
+              <div>
+              <h2>발전추이 15분 | 1시간</h2>
+              </div>
+              <div>
+              <canvas class="line_chart" width="300" height="140"></canvas>
+              </div>
+            </div>
+            
+            <div class="content_3">
+              <h2>기상현황</h2>
+            </div>
+            
+            <div class="content_4">
+              <h2>알람내역</h2>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer">
+        <div></div>
+      </div>
+</div>
+<script>
+
+</script>
+  <script src="./js/EMS.js"></script>
+  <script src="./js/chart.js"></script>
+</body>
+</html>
